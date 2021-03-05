@@ -2,13 +2,18 @@
   "manifest_version": 2,
   "name": "Big Calc",
   "version": "1.0.0",
+  "description": "Calculator without Exponential",
+  "icons": {
+    "16": "img/icons/icon16.png",
+    "48": "img/icons/icon48.png",
+    "128": "img/icons/icon128.png"
+  },
   "sidebar_action": {
     "default_icon": {
-      "16": "icon16.png"
+      "16": "img/icons/icon16.png"
     },
     "default_page": "index.html",
     "default_title": "Big Calc",
-    "use_navigation_bar": true,
     "mobile_user_agent": false
   }
 }

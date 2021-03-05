@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Big Calc",
+  "version": "1.0.0",
+  "sidebar_action": {
+    "default_icon": {
+      "16": "icon16.png"
+    },
+    "default_page": "index.html",
+    "default_title": "Big Calc",
+    "use_navigation_bar": true,
+    "mobile_user_agent": false
+  }
+}

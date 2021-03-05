@@ -5,10 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "a": "vue add vuetify"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "core-js": "^3.6.5",
     "mathjs": "^9.2.0",
     "stylus-loader": "^3.0.2",

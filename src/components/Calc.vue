@@ -33,6 +33,8 @@
 
 <script>
 import { reduceNumberWithDot, deleteExponential, Toast } from '@/utils';
+import anime from 'animejs';
+import { evaluate } from 'mathjs';
 
 export default {
   name: 'Calc',
@@ -75,7 +77,7 @@ export default {
       }
     },
     animateNumber(number) {
-      const tl = window.anime.timeline({
+      const tl = anime.timeline({
         targets: `#${number}`,
         duration: 250,
         easing: 'easeInOutCubic'
@@ -84,7 +86,7 @@ export default {
       tl.add({ backgroundColor: '#f4faff' });
     },
     animateOperator(operator) {
-      const tl = window.anime.timeline({
+      const tl = anime.timeline({
         targets: `#${operator}`,
         duration: 250,
         easing: 'easeInOutCubic'
@@ -146,13 +148,12 @@ export default {
     equal() {
       this.animateOperator('equal');
       if (!this.operatorClicked) {
-        const answer = eval(this.logList + this.current);
+        const answer = evaluate(this.logList + this.current);
         this.answer = deleteExponential(answer);
         return;
       }
 
       this.answer = 'Error';
-      return;
     }
   }
 };

@@ -15,13 +15,13 @@ export default {
 <style scoped>
 #root {
   flex-direction: column;
-  width: 500px;
-  height: 400px;
+  width: 300px;
+  height: 500px;
   padding: 35px;
   display: flex;
   font-family: 'Poppins';
   font-weight: 300;
-  font-size: 18px;
+  font-size: 20px;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
@@ -35,13 +35,14 @@ input {
   background-color: #f4faff;
   border-radius: 5px;
   height: 50px;
+  width: 200px;
 }
 
 .operator {
   border-radius: 10px;
   margin: 12px auto;
   display: flex;
-  width: 60px;
+  width: 200px;
   height: 60px;
   text-align: center;
   justify-content: center;

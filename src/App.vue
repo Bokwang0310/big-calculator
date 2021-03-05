@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-view />
-    <router-link :to="page === 'numberpad' ? '/type' : '/'">
+    <router-link :to="page === 'numberpad' ? '/' : '/type'">
       <v-btn
         class="fab"
         absolute

@@ -152,9 +152,58 @@ export default {
         this.answer = deleteExponential(answer);
         return;
       }
-
       this.answer = 'Error';
+    },
+    selectOperation(operator) {
+      switch (operator) {
+        case '+':
+          this.plus();
+          break;
+        case '-':
+          this.minus();
+          break;
+        case '*':
+          this.times();
+          break;
+        case '/':
+          this.divide();
+          break;
+        case '%':
+          this.percent();
+          break;
+        case 'Enter':
+        case '=':
+          this.equal();
+          break;
+        default:
+          break;
+      }
+    },
+    keyEventListener(e) {
+      const key = e.key;
+      const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+      const operators = ['+', '-', '*', '/', '%', '=', 'Enter'];
+      if (numbers.includes(key)) this.append(key);
+      else if (operators.includes(key)) this.selectOperation(key);
+      else {
+        switch (key) {
+          case '.':
+            this.dot();
+            break;
+          case 'Backspace':
+            this.backspace();
+            break;
+          default:
+            break;
+        }
+      }
     }
+  },
+  mounted() {
+    window.addEventListener('keydown', this.keyEventListener);
+  },
+  beforeDestroy() {
+    window.removeEventListener('keydown', this.keyEventListener);
   }
 };
 </script>
